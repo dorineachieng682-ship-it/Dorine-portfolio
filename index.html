@@ -8,6 +8,7 @@
 
 <link rel="stylesheet" href="style.css">
 <script defer src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -62,22 +63,31 @@
 
 <!-- PROJECTS -->
 <section id="projects" class="section">
-  <h2>Projects</h2>
+  <h2>My Projects</h2>
+
   <div class="cards">
+
     <div class="card">
+      <img src="images/project1.jpg" alt="Project 1">
       <h3>Portfolio Website</h3>
-      <p>A personal portfolio showcasing my skills.</p>
+      <p>A modern personal portfolio built with HTML, CSS, and JavaScript.</p>
+      <a href="#" target="_blank">View Live</a>
     </div>
 
     <div class="card">
+      <img src="images/project2.jpg" alt="Project 2">
       <h3>Business Website</h3>
-      <p>Responsive website for a small business.</p>
+      <p>A responsive website for a small business.</p>
+      <a href="#" target="_blank">View Live</a>
     </div>
 
     <div class="card">
+      <img src="images/project3.jpg" alt="Project 3">
       <h3>Landing Page</h3>
-      <p>A modern landing page design.</p>
+      <p>High-converting landing page design.</p>
+      <a href="#" target="_blank">View Live</a>
     </div>
+
   </div>
 </section>
 
@@ -86,12 +96,12 @@
   <h2>Contact Me</h2>
   <p>Email: dorineachieng682@gmail.com</p>
 
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+ <form id="contact-form">
+  <input type="text" name="user_name" placeholder="Your Name" required>
+  <input type="email" name="user_email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message"></textarea>
+  <button type="submit">Send Message</button>
+</form>
 </section>
 
 <!-- FOOTER -->
