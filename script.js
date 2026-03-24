@@ -16,19 +16,33 @@ document.querySelectorAll('a').forEach(anchor => {
   });
 });
 
-// EMAILJS CONFIG
+// EMAILJS INIT
 (function(){
-  emailjs.init("YOUR_PUBLIC_KEY"); // replace this
+  emailjs.init("1x3A7Nzbu_UOKX9vl");
 })();
 
-document.getElementById("contact-form")
-.addEventListener("submit", function(e) {
+const form = document.getElementById("contact-form");
+const btn = document.getElementById("submit-btn");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", function(e) {
   e.preventDefault();
 
-  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-    .then(function() {
-      alert("Message sent successfully!");
-    }, function(error) {
-      alert("Failed to send message.");
+  btn.classList.add("loading");
+  status.innerText = "";
+
+  emailjs.sendForm("service_46eo82e", "template_0svzwnr", this)
+    .then(() => {
+      status.innerText = "✅ Message sent successfully!";
+      status.className = "success";
+
+      btn.classList.remove("loading");
+      form.reset();
+    })
+    .catch(() => {
+      status.innerText = "❌ Failed to send message.";
+      status.className = "error";
+
+      btn.classList.remove("loading");
     });
 });

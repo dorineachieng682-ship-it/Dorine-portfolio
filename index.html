@@ -68,21 +68,21 @@
   <div class="cards">
 
     <div class="card">
-      <img src="images/project1.jpg" alt="Project 1">
+      <img src="image/project1.jpg" alt="Project 1">
       <h3>Portfolio Website</h3>
       <p>A modern personal portfolio built with HTML, CSS, and JavaScript.</p>
       <a href="#" target="_blank">View Live</a>
     </div>
 
     <div class="card">
-      <img src="images/project2.jpg" alt="Project 2">
+      <img src="image/project2.jpg" alt="Project 2">
       <h3>Business Website</h3>
       <p>A responsive website for a small business.</p>
       <a href="#" target="_blank">View Live</a>
     </div>
 
     <div class="card">
-      <img src="images/project3.jpg" alt="Project 3">
+      <img src="image/project3.jpg" alt="Project 3">
       <h3>Landing Page</h3>
       <p>High-converting landing page design.</p>
       <a href="#" target="_blank">View Live</a>
@@ -97,10 +97,29 @@
   <p>Email: dorineachieng682@gmail.com</p>
 
  <form id="contact-form">
-  <input type="text" name="user_name" placeholder="Your Name" required>
-  <input type="email" name="user_email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message"></textarea>
-  <button type="submit">Send Message</button>
+
+  <div class="input-group">
+    <input type="text" name="user_name" required>
+    <label>Your Name</label>
+  </div>
+
+  <div class="input-group">
+    <input type="email" name="user_email" required>
+    <label>Your Email</label>
+  </div>
+
+  <div class="input-group">
+    <textarea name="message" required></textarea>
+    <label>Your Message</label>
+  </div>
+
+  <button type="submit" id="submit-btn">
+    <span class="btn-text">Send Message</span>
+    <span class="spinner"></span>
+  </button>
+
+  <p id="form-status"></p>
+
 </form>
 </section>
 
@@ -112,6 +131,9 @@
   <a href="#">LinkedIn</a>
 </div>
 </footer>
+<a href="https://wa.me/254757257459" class="whatsapp" target="_blank">
+  💬
+</a>
 
 </body>
 </html>

@@ -161,3 +161,154 @@ footer {
   text-decoration: none;
   font-weight: bold;
 }
+/* PREMIUM FORM */
+#contact-form {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+#contact-form input,
+#contact-form textarea {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+#submit-btn {
+  position: relative;
+  cursor: pointer;
+}
+
+/* LOADING STATE */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* SUCCESS MESSAGE */
+#form-status {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+/* GLASS EFFECT */
+#contact-form {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* INPUT GROUP */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background: transparent;
+  color: black;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* FLOATING LABEL */
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  color: #777;
+  transition: 0.3s;
+  background: transparent;
+  pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #007BFF;
+  background: white;
+  padding: 0 5px;
+}
+
+/* BUTTON */
+#submit-btn {
+  position: relative;
+  background: #007BFF;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* SPINNER */
+.spinner {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  margin: auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* LOADING STATE */
+.loading .btn-text {
+  display: none;
+}
+
+.loading .spinner {
+  display: inline-block;
+}
+
+/* SUCCESS / ERROR */
+.success {
+  color: #00c853;
+}
+
+.error {
+  color: #ff1744;
+}
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
